@@ -47,6 +47,16 @@ h4,h5{
     font-weight: 600;
     display: block;
 }
+.bw-button{
+    color:black;
+    border: solid black;
+    line-height: 50px;
+    padding: 0 30px;
+    margin-top: 25px;
+    font-weight: 600;
+    background-color: white;
+    font-size: 18px;
+}
 /***************************************/
 /*  COLUMNS     */
 /***************************************/
@@ -191,7 +201,8 @@ main section div.hero-container img{
 /***********************/
 main section div.plan-selection-container{
     margin: 0 calc(100%/9*1.5);
-    margin-top: 10%
+    margin-top: 10%;
+    float: none
 }
 main section div.plan-selection-container input[type="radio"]{
     color: blue;
@@ -262,4 +273,76 @@ div.plan-card-container div.plan-card div:nth-child(2) a span{
 div.plan-card-container div.plan-card div:nth-child(2) hr{
     width: 30%;
     margin: 30px 0;
+}
+/*second main section*/
+div.enterprise-container{
+    margin: 0 calc(100%/9*1.5);
+    float: none;
+    margin-top: 5%;
+    border: solid black;
+}
+div.enterprise-container div:nth-child(1){
+    width: 100%;
+    border-bottom: solid black;
+    text-align: center;
+}
+div.enterprise-container div:nth-child(1) i{
+    line-height: 60px;
+}
+div.enterprise-container div:nth-child(2){
+    width: 70%;
+    float: left;
+    padding: 10px;
+}
+div.enterprise-container div:nth-child(2) h3{
+    line-height: 60px;
+}
+div.enterprise-container div:nth-child(2) h4{
+    line-height: 50px;
+}
+div.enterprise-container div:nth-child(3){
+    width: 30%;
+    float: right;
+    padding-top: 30px;
+    padding-right: 30px;
+}
+div.enterprise-container div:nth-child(3) button{
+    width: 100%;
+}
+/* SECTION PARTNER */
+div.partner-container{
+    margin: 0 calc(100%/9*1.5);
+    float: none;
+    margin-top: 10%
+}
+div.partner-container img{
+    width: 50%;
+    float: left;
+}
+div.partner-container div{
+    width: 50%;
+    float: right;
+    padding: 50px;
+}
+div.partner-container div p{
+    margin-top: 30px;
+}
+/*business section*/
+.business-container{
+    margin: 0 calc(100%/9*1.5);
+    float: none;
+    margin-top: 10%;
+}
+.business-ops{
+    width: 30%;
+    float: left;
+    margin-top: 5%;
+}
+.business-ops:nth-child(3), .business-ops:nth-child(6) {
+    margin: 0 5%;
+    margin-top: 5%;
+    
+}
+.business-ops img{
+    width: 100%;
 }
