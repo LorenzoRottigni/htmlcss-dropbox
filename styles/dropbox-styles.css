@@ -144,43 +144,122 @@ header div.right-heading-nav nav li{
     padding-right: 40px;
 }
 /****************************/
-/*  HEADING MAIN SECTION     */
+/*  MAIN    */
 /****************************/
-header section{
-    float: left;
-    margin-top: 2vh;
+main section:nth-child(1){
     width: 100%;
-    height: 80vh;
+    height: 90vh;
     background-color: #B4D0E7;
+}
+/*MAIN HERO STYLES*/
+main section div.hero-container{
+    margin: 0 calc(100%/9);
     position: relative;
-    /*padding: 0 calc(100%/9);*/
+    height: 90vh;
+    float: none;
 }
-/****************************/
-/*  HEADING HERO CONTAINER  */
-/****************************/
-/* alter super-center of the hero*/
-header section h1{
-    margin-top: 15vh
+main section div.hero-container h1{
+    position: absolute;
+    top: 10vh;
+    line-height: 12vh;
 }
-/*equals padding-bottom of topnav*/
-.hero-container{
-    margin-top: 5vh
+main section div.hero-container p{
+    position: absolute;
+    left: 0;
+    top: 45vh;  
+    width: 30%;
+    font-weight: 600;
 }
-.hero-container div{
-    width: 35%;
-    float: left;
-}
-.hero-container img{
-    float: right;
-    height: 50vh;
-}
-.hero-container p button{
+main section div.hero-container p button{
     margin-top: 3vh;
     margin-bottom: 1vh;
 }
-.hero-container p span{
+main section div.hero-container p span{
     display: block;
     font-size: 4em;
     font-weight: bold;
     margin-top: 3vh;
+}
+main section div.hero-container img{
+    position: absolute;
+    width: 60%;
+    bottom: -40px;
+    right: 0;
+}
+/***********************/
+/* SECOND MAIN SECTION */
+/***********************/
+main section div.plan-selection-container{
+    margin: 0 calc(100%/9*1.5);
+    margin-top: 10%
+}
+main section div.plan-selection-container input[type="radio"]{
+    color: blue;
+    margin-top: 3%;
+}
+div.plan-card-container{
+    width: 100%;
+    margin-top: 2%
+}
+div.plan-card-container div.plan-card{
+    width: 30%;
+    border: solid yellowgreen;
+    min-height: 100px;
+    float: left
+}
+div.plan-card-container div.plan-card:nth-child(2){
+    margin: 0 5%;
+}
+div.plan-card-container div.plan-card{
+    width: 30%;
+    border: solid black;
+    min-height: 100px;
+    float: left
+}
+div.plan-card-container div.plan-card div:nth-child(1){
+    text-align: center;
+    padding: 10px 0;
+    border-bottom: solid black;
+}
+div.plan-card-container div.plan-card div:nth-child(2){
+    padding: 20px;
+    height: 130vh
+}
+div.plan-card-container div.plan-card div:nth-child(2) h3{
+    line-height: 70px;
+}
+div.plan-card-container div.plan-card div:nth-child(2) h4{
+    line-height: 40px;
+}
+span.grey{
+    font-weight: 600;
+    color: gray;
+}
+div.plan-card-container div.plan-card div:nth-child(2) ul{
+    margin-top: 45px;
+    font-weight: 600;
+    list-style: none;
+}
+div.plan-card-container div.plan-card div:nth-child(2) li{
+    margin-top: 25px;
+}
+div.plan-card-container div.plan-card div:nth-child(2) li i[class="fas fa-check"]{
+    color: #0061FF;
+}
+div.plan-card-container div.plan-card div:nth-child(2) button{
+    margin-top: 40px;
+    width: 100%;   
+}
+div.plan-card-container div.plan-card div:nth-child(2) a{
+    text-decoration: none;
+    color: black;
+    line-height: 60px;
+}
+div.plan-card-container div.plan-card div:nth-child(2) a span{
+    color: #0061FF;
+    text-decoration: underline;
+}
+div.plan-card-container div.plan-card div:nth-child(2) hr{
+    width: 30%;
+    margin: 30px 0;
 }
