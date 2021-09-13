@@ -1,0 +1,186 @@
+/*elements reset*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*inherit styles*/
+body{
+    font-family: 'Open sans', sans-serif;
+    font-size: 16px;
+}
+/*COLOR PALETTE*/
+/* 
+    LIGHT-BLUE: #B4D0E7
+    BLUE: #0061FF
+    BLACK: #000000
+    WHITE: #FFFFFF
+*/
+/***************************************/
+/*  FONT DEFINITION     */
+/***************************************/
+/*all EM calculated using 16px as default size*/
+h1{
+    font-size: 4.8125em;
+}
+h2{
+    font-size: 2.5em;
+}
+h3{
+    font-size: 1.5625em;
+}
+h4,h5{
+    font-size: 1em;
+}
+.small-text{
+    font-size: 0.875em;
+}
+/***************************************/
+/*  BUTTONS DEFINITION     */
+/***************************************/
+.blue-button{
+    background-color: #0061FF;
+    color: white;
+    line-height: 4vh;
+    padding: 0 30px;
+    border: none;
+    font-weight: 600;
+    display: block;
+}
+/***************************************/
+/*  COLUMNS     */
+/***************************************/
+.col-1_9{
+    width: calc(100%/9)
+}  
+.col-2_9{
+    width: calc(100%/9*2)
+}  
+.col-3_9{
+    width: calc(100%/9*3)
+}  
+.col-4_9{
+    width: calc(100%/9*4)
+}  
+.col-5_9{
+    width: calc(100%/9*5)
+}  
+.col-6_9{
+    width: calc(100%/9*6)
+}  
+.col-7_9{
+    width: calc(100%/9*7)
+}  
+.col-1_9{
+    width: calc(100%/9*8)
+}  
+[class^="col-"]{
+    float: left;
+}
+/*****************************/
+/*  CLASS UTILITIES */
+/*****************************/
+.clearfix{
+    content: "";
+    display: table;
+    clear: both;
+}
+/*  remember parent position relative   */
+.super-center{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%)
+}
+/****************************/
+/*  HEADING     */
+/****************************/
+header{
+    width: 100%;
+    padding: 2vh 0;
+    font-weight: 600;  
+}
+/****************************/
+/*  HEADING NAVBAR    */
+/****************************/
+header nav{
+    display: inline-block;
+}
+header nav ul{
+    list-style: none;
+}
+header nav ul li a{
+    line-height: 4vh;
+    text-decoration: none;
+    color: black
+}
+header nav ul li a:hover{
+    color:#0061FF
+}
+/*left section of navbar*/
+header div.left-heading-nav{
+    float: left;
+    max-width: 50%;
+    vertical-align: middle;
+}
+/*  dropbox logo    */
+header div.left-heading-nav img{
+    display: inline-block;  
+    vertical-align: middle;
+    height: 4vh
+}
+header div.left-heading-nav nav li{
+    display: inline-block;
+    padding-left: 40px;
+}
+/*right section of nav*/
+header div.right-heading-nav{
+    float: right;
+    max-width: 50%;
+    text-align: right;
+}
+header div.right-heading-nav nav li{
+    display: inline-block;
+    padding-right: 40px;
+}
+/****************************/
+/*  HEADING MAIN SECTION     */
+/****************************/
+header section{
+    float: left;
+    margin-top: 2vh;
+    width: 100%;
+    height: 80vh;
+    background-color: #B4D0E7;
+    position: relative;
+    /*padding: 0 calc(100%/9);*/
+}
+/****************************/
+/*  HEADING HERO CONTAINER  */
+/****************************/
+/* alter super-center of the hero*/
+header section h1{
+    margin-top: 15vh
+}
+/*equals padding-bottom of topnav*/
+.hero-container{
+    margin-top: 5vh
+}
+.hero-container div{
+    width: 35%;
+    float: left;
+}
+.hero-container img{
+    float: right;
+    height: 50vh;
+}
+.hero-container p button{
+    margin-top: 3vh;
+    margin-bottom: 1vh;
+}
+.hero-container p span{
+    display: block;
+    font-size: 4em;
+    font-weight: bold;
+    margin-top: 3vh;
+}
