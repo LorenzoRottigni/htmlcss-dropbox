@@ -503,3 +503,44 @@ div.faq-container button:active + .faq-to-show{
 footer{
     margin-top: 15%;
 }
+.footer-container{
+    background-color: black;
+    width: 100%;
+    padding-top: 100px;
+    padding-bottom: 50px;
+    padding-left: calc(100%/7);
+    padding-right: calc(100%/7);
+}
+
+.col-1_5{
+    width: calc(100%/5)
+}
+.footer-container ul{
+    list-style: none;
+    color: white;
+}
+.footer-container ul li:first-of-type{
+    line-height: 60px;
+}
+.footer-container ul li{
+    line-height: 40px;
+}
+.footer-lang-container{
+    padding-left: calc(100%/7);
+    padding-right: calc(100%/7);
+    padding-top: 5%;
+    padding-bottom: 2%;
+    background-color: black;
+    width: 100%;
+}
+.footer-lang-container hr{
+    width: 10%;
+    color: white
+}
+.footer-lang-container p{
+    color: white;
+    margin-top: 3%;
+}
+.footer-lang-container p i:last-of-type{
+    vertical-align: bottom;
+}
