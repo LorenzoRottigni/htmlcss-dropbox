@@ -467,7 +467,39 @@ div.sponsor-bottom-container{
 div.faq-container{
     float: none;
     height: 100px;
-    border: solid coral;
     margin: 0 calc(100%/9);
-    margin-top: 20%;
+    margin-top: 10%;
+}
+div.faq-container ul{
+    list-style: none;
+}
+div.faq-container ul li{
+    width: 100%;
+    border-top: solid black;
+    position: relative;
+}
+div.faq-container h3{
+    float: left;
+    width: 90%;
+    line-height: 80px;
+}
+div.faq-container button{
+    float: right;
+    background: transparent;
+    border: none;
+    width: 10%;
+    line-height: 80px;
+}
+.faq-to-show{
+    display: none;
+}
+.faq-to-show h3, .faq-to-show p{
+    width: 90%;
+}
+div.faq-container button:active + .faq-to-show{
+    display: block
+}
+/*SECTION FOOTER*/
+footer{
+    margin-top: 15%;
 }
