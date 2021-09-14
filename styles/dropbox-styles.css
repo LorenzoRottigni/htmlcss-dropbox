@@ -81,7 +81,7 @@ h4,h5{
 .col-7_9{
     width: calc(100%/9*7)
 }  
-.col-1_9{
+.col-8_9{
     width: calc(100%/9*8)
 }  
 [class^="col-"]{
@@ -109,6 +109,10 @@ header{
     width: 100%;
     padding: 2vh 0;
     font-weight: 600;  
+    position: fixed;
+    background-color: white;
+    border-bottom: solid #0061FF;
+    z-index: 99;
 }
 /****************************/
 /*  HEADING NAVBAR    */
@@ -225,7 +229,7 @@ div.plan-card-container div.plan-card{
     width: 30%;
     border: solid black;
     min-height: 100px;
-    float: left
+    float: left;
 }
 div.plan-card-container div.plan-card div:nth-child(1){
     text-align: center;
@@ -234,7 +238,24 @@ div.plan-card-container div.plan-card div:nth-child(1){
 }
 div.plan-card-container div.plan-card div:nth-child(2){
     padding: 20px;
-    height: 130vh
+    height: 130vh;
+    overflow-y: auto;
+    scrollbar-color: rebeccapurple green; 
+}
+div.plan-card-container div.plan-card div:nth-child(2)::-webkit-scrollbar {
+    height: 10px;
+    width: 10px;
+    background: transparent;
+}
+
+div.plan-card-container div.plan-card div:nth-child(2)::-webkit-scrollbar-thumb {
+    background: #0061FF;
+    -webkit-border-radius: 1ex;
+    -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.75);
+}
+
+div.plan-card-container div.plan-card div:nth-child(2)::-webkit-scrollbar-corner {
+    background: #000;
 }
 div.plan-card-container div.plan-card div:nth-child(2) h3{
     line-height: 70px;
@@ -345,4 +366,23 @@ div.partner-container div p{
 }
 .business-ops img{
     width: 100%;
+}
+.business-footer{
+    margin-top: 20%;
+    width: 50%;
+    float: left;
+}
+/*sponsor section*/
+div.sponsor-container{
+    width: 100%;
+    margin-top: 100px;
+    border: solid coral
+}
+div.sponsor-container .logo-square{
+    border: solid skyblue;
+    min-width: calc(100%/9*1.5);
+    height: auto
+}
+div.sponsor-container .logo-square img{
+    width: 100%
 }
