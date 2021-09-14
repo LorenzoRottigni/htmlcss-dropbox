@@ -57,6 +57,16 @@ h4,h5{
     background-color: white;
     font-size: 18px;
 }
+.white-button{
+    color:black;
+    line-height: 40px;
+    padding: 0 15px;   
+    font-weight: 600;
+    background-color: white;
+    font-size: 18px;
+    border: none;
+    float: right;
+}
 /***************************************/
 /*  COLUMNS     */
 /***************************************/
@@ -376,13 +386,88 @@ div.partner-container div p{
 div.sponsor-container{
     width: 100%;
     margin-top: 100px;
-    border: solid coral
 }
-div.sponsor-container .logo-square{
-    border: solid skyblue;
-    min-width: calc(100%/9*1.5);
-    height: auto
+div.sponsor-container div{
+    float: left;
 }
-div.sponsor-container .logo-square img{
-    width: 100%
+div.sponsor-container div.sponsor-center-container{
+    width: 40%;
+    padding: 50px;
+    background-color: #F5F5F5;
+    height: 30vw;
+}
+div.sponsor-container div.sponsor-center-container img{
+    width: 30%;
+}
+div.sponsor-container div.sponsor-center-container hr{
+    width: 15%;
+    margin-top: 25px;
+}
+div.sponsor-container div.sponsor-center-container p{
+    margin-top: 50px;
+}
+div.sponsor-container div.sponsor-side-container{
+    width: 30%;
+}
+div.sponsor-container div.sponsor-side-container div{
+    width: 50%;
+    height: 15vw;
+    position: relative;
+}
+div.sponsor-container div.sponsor-side-container div svg{
+    width: 70%;
+    text-align: center;
+}
+/*sponsor section colors*/
+.sponsor-green{
+    background-color: #A2D39B;
+}
+.sponsor-green::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    border: 10px solid #D0E9CD;
+    z-index: 3;
+}
+.sponsor-darkred{
+    background-color: #61082B;
+}
+.sponsor-blue{
+    background-color: #0093CE;
+}
+.sponsor-hotred{
+    background-color: #FF1C1C;
+}
+.sponsor-smoothred{
+    background-color: #D5001F;
+}
+.sponsor-tiffany{
+    background-color: #B4D0E7;
+}
+.sponsor-darkblue{
+    background-color: #0D2481;
+}
+.sponsor-yellow{
+    background-color: #FFD830;
+}
+div.sponsor-bottom-container{
+    width: 100%;
+    padding: 130px 10%;
+}
+.darkred{
+    color: #61082B;
+    width: 40%;
+    float: left;
+
+}
+/*faq section*/
+div.faq-container{
+    float: none;
+    height: 100px;
+    border: solid coral;
+    margin: 0 calc(100%/9);
+    margin-top: 20%;
 }
