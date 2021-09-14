@@ -41,11 +41,17 @@ h4,h5{
 .blue-button{
     background-color: #0061FF;
     color: white;
+    /*dimensione in vh per mantenere le dimensione della navbar*/
     line-height: 4vh;
     padding: 0 30px;
     border: none;
     font-weight: 600;
     display: block;
+}
+.blue-button:hover{
+    color: #0061FF;
+    background-color: transparent;
+    border: solid #0061FF
 }
 .bw-button{
     color:black;
@@ -57,6 +63,10 @@ h4,h5{
     background-color: white;
     font-size: 18px;
 }
+.bw-button:hover{
+    border: solid #0061FF;
+    color: #0061FF;
+}
 .white-button{
     color:black;
     line-height: 40px;
@@ -66,6 +76,11 @@ h4,h5{
     font-size: 18px;
     border: none;
     float: right;
+}
+.white-button:hover{
+    background-color: transparent;
+    border: solid white;
+    color: white
 }
 /***************************************/
 /*  COLUMNS     */
@@ -93,6 +108,9 @@ h4,h5{
 }  
 .col-8_9{
     width: calc(100%/9*8)
+}
+.col-1_5{
+    width: calc(100%/5)
 }  
 [class^="col-"]{
     float: left;
@@ -116,8 +134,9 @@ h4,h5{
 /*  HEADING     */
 /****************************/
 header{
+    margin-top: -4vh;
     width: 100%;
-    padding: 2vh 0;
+    padding: 15px 0;
     font-weight: 600;  
     position: fixed;
     background-color: white;
@@ -170,39 +189,49 @@ header div.right-heading-nav nav li{
 /****************************/
 /*  MAIN    */
 /****************************/
-main section:nth-child(1){
+main{
+    margin-top: 4vh;
+}
+/*hero section selector*/
+main section:nth-child(1){  
     width: 100%;
-    height: 90vh;
     background-color: #B4D0E7;
 }
 /*MAIN HERO STYLES*/
 main section div.hero-container{
     margin: 0 calc(100%/9);
     position: relative;
-    height: 90vh;
+    height: 100vh;
     float: none;
 }
 main section div.hero-container h1{
     position: absolute;
-    top: 10vh;
-    line-height: 12vh;
+    top: 10%;
+    line-height: 100px;
 }
 main section div.hero-container p{
     position: absolute;
     left: 0;
-    top: 45vh;  
+    bottom: 0;  
     width: 30%;
     font-weight: 600;
 }
 main section div.hero-container p button{
-    margin-top: 3vh;
-    margin-bottom: 1vh;
+    margin-top: 40px;
+    margin-bottom: 20px;
 }
 main section div.hero-container p span{
     display: block;
     font-size: 4em;
     font-weight: bold;
-    margin-top: 3vh;
+    margin-top: 30px;
+    transition: 2s;
+}
+main section div.hero-container p span i{
+    transition: 1s;
+}
+main section div.hero-container p span i:hover{
+    transform: rotate(360deg)
 }
 main section div.hero-container img{
     position: absolute;
@@ -213,6 +242,7 @@ main section div.hero-container img{
 /***********************/
 /* SECOND MAIN SECTION */
 /***********************/
+/*external div containing plans*/
 main section div.plan-selection-container{
     margin: 0 calc(100%/9*1.5);
     margin-top: 10%;
@@ -222,13 +252,16 @@ main section div.plan-selection-container input[type="radio"]{
     color: blue;
     margin-top: 3%;
 }
+main section div.plan-selection-container label{
+    margin-right: 25px;
+}
 div.plan-card-container{
     width: 100%;
     margin-top: 2%
 }
+/*single card*/
 div.plan-card-container div.plan-card{
     width: 30%;
-    border: solid yellowgreen;
     min-height: 100px;
     float: left
 }
@@ -250,8 +283,8 @@ div.plan-card-container div.plan-card div:nth-child(2){
     padding: 20px;
     height: 130vh;
     overflow-y: auto;
-    scrollbar-color: rebeccapurple green; 
 }
+/* !selettori per la scrollbar su chrome */
 div.plan-card-container div.plan-card div:nth-child(2)::-webkit-scrollbar {
     height: 10px;
     width: 10px;
@@ -305,7 +338,7 @@ div.plan-card-container div.plan-card div:nth-child(2) hr{
     width: 30%;
     margin: 30px 0;
 }
-/*second main section*/
+/*enterprise main section*/
 div.enterprise-container{
     margin: 0 calc(100%/9*1.5);
     float: none;
@@ -372,7 +405,6 @@ div.partner-container div p{
 .business-ops:nth-child(3), .business-ops:nth-child(6) {
     margin: 0 5%;
     margin-top: 5%;
-    
 }
 .business-ops img{
     width: 100%;
@@ -470,6 +502,11 @@ div.faq-container{
     margin: 0 calc(100%/9);
     margin-top: 10%;
 }
+div.faq-container span{
+    color: grey;
+    padding-bottom: 15px;
+    display: inline-block;
+}
 div.faq-container ul{
     list-style: none;
 }
@@ -489,15 +526,26 @@ div.faq-container button{
     border: none;
     width: 10%;
     line-height: 80px;
+    transform: rotate(90deg);
+    transition: 0.5s;
 }
 .faq-to-show{
     display: none;
+    padding: 0 30px;
 }
 .faq-to-show h3, .faq-to-show p{
     width: 90%;
 }
+.faq-to-show p{
+    padding-bottom: 15px;
+}
+div.faq-container button:active{
+    transform: rotate(360deg);
+    transform: scale(160%);
+    color: #0061FF;
+}
 div.faq-container button:active + .faq-to-show{
-    display: block
+    display: block;
 }
 /*SECTION FOOTER*/
 footer{
@@ -511,10 +559,6 @@ footer{
     padding-left: calc(100%/7);
     padding-right: calc(100%/7);
 }
-
-.col-1_5{
-    width: calc(100%/5)
-}
 .footer-container ul{
     list-style: none;
     color: white;
@@ -522,8 +566,14 @@ footer{
 .footer-container ul li:first-of-type{
     line-height: 60px;
 }
+.footer-container ul li:first-of-type:hover{
+    color: white
+}
 .footer-container ul li{
     line-height: 40px;
+}
+.footer-container ul li:hover{
+    color: #0061FF
 }
 .footer-lang-container{
     padding-left: calc(100%/7);
