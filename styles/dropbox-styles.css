@@ -5,7 +5,7 @@
     }
     50%{
         transform: translateY(100px);
-        color: #B4D0E7;
+        color: #0061FF;
     }
     100%{
         transform: traslateY(-100px);
@@ -22,7 +22,8 @@
 /*inherit styles*/
 body{
     font-family: 'Open sans', sans-serif;
-    font-size: 1.2039127163280663vh;
+    font-size: 16px
+    /*font-size: 1.2039127163280663vh;*/
 }
 /*COLOR PALETTE*/
 /* 
@@ -36,19 +37,19 @@ body{
 /***************************************/
 /*all EM calculated using 16px as default size*/
 h1{
-    font-size: 5.793829947328819vh;
+    font-size: 77px;
 }
 h2{
-    font-size: 3.0097817908201656vh;
+    font-size: 40px;
 }
 h3{
-    font-size: 1.8811136192626035vh;
+    font-size: 25px;
 }
 h4,h5{
-    font-size:  1.2039127163280663vh;
+    font-size:  16px;
 }
 .small-text{
-    font-size: 0.875em;
+    font-size: 14px;
 }
 /***************************************/
 /*  BUTTONS DEFINITION     */
@@ -57,11 +58,11 @@ h4,h5{
     background-color: #0061FF;
     color: white;
     /*dimensione in vh per mantenere le dimensione della navbar*/
-    line-height: 4vh;
-    padding: 0 30px;
+    padding: 10px 30px;
     border: solid transparent;
     font-weight: 600;
     display: block;
+    cursor: pointer;
 }
 .blue-button:hover{
     color: #0061FF;
@@ -77,6 +78,7 @@ h4,h5{
     font-weight: 600;
     background-color: white;
     font-size: 18px;
+    cursor: pointer;
 }
 .bw-button:hover{
     border: solid #0061FF;
@@ -91,6 +93,7 @@ h4,h5{
     font-size: 18px;
     border: none;
     float: right;
+    cursor: pointer;
 }
 .white-button:hover{
     background-color: transparent;
@@ -149,9 +152,8 @@ h4,h5{
 /*  HEADING     */
 /****************************/
 header{
-    margin-top: -4vh;
     width: 100%;
-    padding: 15px 0;
+    padding: 20px 35px;
     font-weight: 600;  
     position: fixed;
     background-color: white;
@@ -178,7 +180,7 @@ header nav ul li a:hover{
 /*left section of navbar*/
 header div.left-heading-nav{
     float: left;
-    max-width: 50%;
+    width: 50%;
     vertical-align: middle;
 }
 /*  dropbox logo    */
@@ -187,26 +189,20 @@ header div.left-heading-nav img{
     vertical-align: middle;
     height: 4vh
 }
-header div.left-heading-nav nav li{
+header li{
     display: inline-block;
-    padding-left: 40px;
+    padding-left: 20px;
 }
 /*right section of nav*/
 header div.right-heading-nav{
     float: right;
-    max-width: 50%;
+    width: 50%;
     text-align: right;
 }
-header div.right-heading-nav nav li{
-    display: inline-block;
-    padding-right: 40px;
-}
+
 /****************************/
 /*  MAIN    */
 /****************************/
-main{
-    margin-top: 4vh;
-}
 /*hero section selector*/
 main section:nth-child(1){  
     width: 100%;
@@ -216,21 +212,19 @@ main section:nth-child(1){
 main section div.hero-container{
     margin: 0 calc(100%/9);
     position: relative;
-    height: 85vh;
     float: none;
+    bottom: -80px;
 }
 main section div.hero-container h1{
-    position: absolute;
-    top: 10vh;
-    max-height: 30vh;
-    bottom: 60vh;
+    line-height: 100px;
+    padding-top: 10%;
+    padding-bottom: 5%;
 }
 main section div.hero-container p{
-    position: absolute;
-    left: 0;
-    bottom: 0;  
     width: 30%;
     font-weight: 600;
+    float: left;
+    padding-top: 10%;
 }
 main section div.hero-container p button{
     margin-top: 40px;
@@ -244,13 +238,12 @@ main section div.hero-container p span{
     transition: 2s;
 }
 main section div.hero-container p span i{
+    
     animation: up-n-down 2s infinite
 }
 main section div.hero-container img{
-    position: absolute;
-    height: 50vh;
-    bottom: -40px;
-    right: 0;
+    width: 60%;
+    float: right;
 }
 /***********************/
 /* SECOND MAIN SECTION */
@@ -528,7 +521,7 @@ div.faq-container ul li{
     border-top: solid 1px black;
     position: relative;
 }
-div.faq-container h3{
+div.faq-container h4{
     float: left;
     width: 90%;
     line-height: 80px;
