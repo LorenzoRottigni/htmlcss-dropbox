@@ -1,13 +1,28 @@
+@keyframes up-n-down {
+    0%{
+        transform: translateY(0);
+        color: white;
+    }
+    50%{
+        transform: translateY(100px);
+        color: #B4D0E7;
+    }
+    100%{
+        transform: traslateY(-100px);
+        color: white;
+    }
+}
 /*elements reset*/
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    border: 5px black;
 }
 /*inherit styles*/
 body{
     font-family: 'Open sans', sans-serif;
-    font-size: 16px;
+    font-size: 1.2039127163280663vh;
 }
 /*COLOR PALETTE*/
 /* 
@@ -21,16 +36,16 @@ body{
 /***************************************/
 /*all EM calculated using 16px as default size*/
 h1{
-    font-size: 4.8125em;
+    font-size: 5.793829947328819vh;
 }
 h2{
-    font-size: 2.5em;
+    font-size: 3.0097817908201656vh;
 }
 h3{
-    font-size: 1.5625em;
+    font-size: 1.8811136192626035vh;
 }
 h4,h5{
-    font-size: 1em;
+    font-size:  1.2039127163280663vh;
 }
 .small-text{
     font-size: 0.875em;
@@ -44,7 +59,7 @@ h4,h5{
     /*dimensione in vh per mantenere le dimensione della navbar*/
     line-height: 4vh;
     padding: 0 30px;
-    border: none;
+    border: solid transparent;
     font-weight: 600;
     display: block;
 }
@@ -69,8 +84,8 @@ h4,h5{
 }
 .white-button{
     color:black;
-    line-height: 40px;
-    padding: 0 15px;   
+    line-height: 60px;
+    padding: 0 30px;   
     font-weight: 600;
     background-color: white;
     font-size: 18px;
@@ -201,13 +216,14 @@ main section:nth-child(1){
 main section div.hero-container{
     margin: 0 calc(100%/9);
     position: relative;
-    height: 100vh;
+    height: 85vh;
     float: none;
 }
 main section div.hero-container h1{
     position: absolute;
-    top: 10%;
-    line-height: 100px;
+    top: 10vh;
+    max-height: 30vh;
+    bottom: 60vh;
 }
 main section div.hero-container p{
     position: absolute;
@@ -228,14 +244,11 @@ main section div.hero-container p span{
     transition: 2s;
 }
 main section div.hero-container p span i{
-    transition: 1s;
-}
-main section div.hero-container p span i:hover{
-    transform: rotate(360deg)
+    animation: up-n-down 2s infinite
 }
 main section div.hero-container img{
     position: absolute;
-    width: 60%;
+    height: 50vh;
     bottom: -40px;
     right: 0;
 }
@@ -270,18 +283,18 @@ div.plan-card-container div.plan-card:nth-child(2){
 }
 div.plan-card-container div.plan-card{
     width: 30%;
-    border: solid black;
+    border: solid 1px black;
     min-height: 100px;
     float: left;
 }
 div.plan-card-container div.plan-card div:nth-child(1){
     text-align: center;
     padding: 10px 0;
-    border-bottom: solid black;
+    border-bottom: solid 1px black;
 }
 div.plan-card-container div.plan-card div:nth-child(2){
     padding: 20px;
-    height: 130vh;
+    height: 80vh;
     overflow-y: auto;
 }
 /* !selettori per la scrollbar su chrome */
@@ -343,11 +356,11 @@ div.enterprise-container{
     margin: 0 calc(100%/9*1.5);
     float: none;
     margin-top: 5%;
-    border: solid black;
+    border: solid 1px black;
 }
 div.enterprise-container div:nth-child(1){
     width: 100%;
-    border-bottom: solid black;
+    border-bottom: solid 1px black;
     text-align: center;
 }
 div.enterprise-container div:nth-child(1) i{
@@ -512,7 +525,7 @@ div.faq-container ul{
 }
 div.faq-container ul li{
     width: 100%;
-    border-top: solid black;
+    border-top: solid 1px black;
     position: relative;
 }
 div.faq-container h3{
@@ -524,7 +537,7 @@ div.faq-container button{
     float: right;
     background: transparent;
     border: none;
-    width: 10%;
+    padding: 0 50px;
     line-height: 80px;
     transform: rotate(90deg);
     transition: 0.5s;
