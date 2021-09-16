@@ -433,6 +433,7 @@ div.sponsor-container div.sponsor-center-container{
     padding: 50px;
     background-color: #F5F5F5;
     height: 30vw;
+    overflow-y: auto;
 }
 div.sponsor-container div.sponsor-center-container img{
     width: 30%;
